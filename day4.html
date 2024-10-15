@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // lrder else if
+        // var a = 10
+        // var b = 20
+        // var c = 30
+        // if (a > b && a > c) {
+        //     console.log("A is the greatest number: " + a);
+        // } else if (b > a && b > c) {
+        //     console.log("B is the greatest number: " + b);
+        // } else {
+        //     console.log("C is the greatest number: " + c);
+        // }
+
+
+    //    var ch=prompt("enter the ch");
+    //     if(ch=='a' || ch=='A'){
+    //         alert("alphabet");
+    //     }
+    //     else if(ch>=0 && ch<=9){
+    //         alert("digit");
+    //     }
+    //     else{
+    //         alert("special character");
+    //     }   
+
+
+    
+    // var ch = prompt("Enter a character");
+    // if (ch === 'a' || ch === 'e' || ch === 'i' || ch === 'o' || ch === 'u' || ch === 'A' || ch === 'E' || ch === 'I' || ch === 'O' || ch === 'U') {
+    //     alert("The character is a vowel");
+    // } else {
+    //     alert("The character is a consonant");
+    // }
+
+        
+
+    
+
+    //   2.  Write a javascript to input electricity unit charge and calculate the total electricity bill according to the given condition:
+    // For first 50 units Rs. 0.50/unit
+    // For next 100 units Rs. 0.75/unit
+    // For next 100 units Rs. 1.20/unit
+    // For unit above 250 Rs. 1.50/unit
+    // An additional surcharge of 20% is added to the bill.
+ 
+
+    var u=number(prompt("enter the unit"));
+    if(u>1 && u<=50){
+        b=u*0.50;
+    }
+    else if(u>=51 && u<=150){
+        b=(u-50)*0.75 +50 * 0.50
+    }
+    else if(u>=151 && u<=250){
+        b=(u-150)*1.20 + 100 * 0.75 + 50 * 0.50
+    }
+    else{
+        b=(u-250)*1.50 + 100 * 0.75 + 50 * 0.50 + 50 * 0.50 * 0.20
+    }
+    suc=b*0.20;
+    tb=b+suc;
+    document.write("total bill is "+tb);
+
+
+
+    </script>
+</body>
+</html>
