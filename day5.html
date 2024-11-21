@@ -5,36 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url("https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-thatguycraig000-1563356.jpg&fm=jpg");
+            color: black;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            align-items: center;
+            height: 100vh;
+            width: auto;
+        }
+
+        .main {
+            text-align: center;
+            background-color: none;
+            padding: 20px 40px;
+            border-radius: 15px;
+            
+        }
+
+        #quote {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #newquotes {
+            padding: 10px 30px;
+            font-size: 30px;
+            color:white;
+            background-color: black;
+            border: 2px 2px 5px solid red;
+
+        }
+    </style>
 </head>
 
 <body>
 
+    <div class="main">
+        <p id="quote"></p>
+        <button id="newquotes">click</button>
+    </div>
+
+
     <script>
+        var quotes = [
+            "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+            "Never give up. Never, never, never give up! Because failure is not the end, but just a stepping stone to success.",
+            "The important thing is not to stop questioning. Curiosity has its own reason for existing.",
+            "Believe you can and you're halfway there."
+        ];
 
-        // 10. Write a javascript to check whether a character is uppercase or lowercase alphabet.
+        function random() {
+            var random = Math.floor(Math.random() * quotes.length);
+            return quotes[random];
 
-        let character = "A";
-        if (character >= "A" && character <= "Z") {
-            console.log(character + " is an uppercase alphabet.");
-        } else if (character >= "a" && character <= "z") {
-            console.log(character + " is a lowercase alphabet.");
-        } else {
-            console.log(character + " is not an alphabet.");
+
         }
 
+        function display() {
+            var dis = document.getElementById("quote");
+            dis.innerHTML = random()
+        }
 
-
-
-
-
-
-
-
-
-
-
-
+        document.getElementById("newquotes").addEventListener("click", display);
     </script>
+
+
 
 </body>
 

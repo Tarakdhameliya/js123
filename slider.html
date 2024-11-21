@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        #slider {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #slider img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        button {
+            position: absolute;
+            z-index: 10;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
+        }
+
+        #prev-btn {
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #next-btn {
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="slider">
+        <img src="" alt="slider image" id="slider-img">
+    </div>
+    <button id="prev-btn">prev</button>
+    <button id="next-btn">next</button>
+
+    <script>
+        var sliderData = [
+            { src: "https://www.dwtraveluae.com/wp-content/uploads/2023/09/IMG-World-Tickets-Only.jpg" },
+            { src: "https://whatson.ae/wp-content/uploads/2016/12/img-1.jpg" },
+            { src: "https://veronikasadventure.com/wp-content/uploads/2024/01/2_indoor-theme-park-img-world-of-adventure.jpg" }
+        ];
+
+        var currentIndex = 0;
+
+        function update() {
+            var sliderImg = document.getElementById("slider-img");
+            sliderImg.src = sliderData[currentIndex].src;
+        }
+
+        document.getElementById("prev-btn").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + sliderData.length) % sliderData.length;
+            update();
+        });
+
+        document.getElementById("next-btn").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % sliderData.length;
+            update();
+        });
+
+        update();
+    </script>
+
+</body>
+
+</html>

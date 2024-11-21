@@ -182,35 +182,62 @@
 
         // 8 . Write a C program to create Simple Calculator using switch case. 
 
-        var num1 = Number(prompt("enter the number1"));
-        var num2 = Number(prompt("enter the number2"));
-        var ch = prompt("enter the ch");
+        // var num1 = Number(prompt("enter the number1"));
+        // var num2 = Number(prompt("enter the number2"));
+        // var operator = prompt("enter the ch");
 
-        switch (ch) {
-            case '+':
-                number = num1 + num2;
-                console.log(number)
-                break;
-            case '-':
-                number = num1 - num2;
-                console.log(number)
-                break;
-            case '*':
-                number = num1 * num2;
-                console.log(number)
-                break;
-            case '/':
-                number = num1 / num2;
-                console.log(number)
-                break;
-            case '%':
-                number = num1 % num2;
-                console.log(number)
-                break;
-            default:
-                console.log("wc");
+        // switch (ch) {
+        //     case '+':
+        //         number = num1 + num2;
+        //         console.log(number)
+        //         break;
+        //     case '-':
+        //         number = num1 - num2;
+        //         console.log(number)
+        //         break;
+        //     case '*':
+        //         number = num1 * num2;
+        //         console.log(number)
+        //         break;
+        //     case '/':
+        //         number = num1 / num2;
+        //         console.log(number)
+        //         break;
+        //     case '%':   
+        //         number = num1 % num2;
+        //         console.log(number)
+        //         break;
+        //     default:
+        //         console.log("wc");
 
-        }  
+        // }  
+
+
+        
+        function calculate(num1, num2, operator) {
+    switch (operator) {
+        case '+':
+            return num1 + num2;
+        case '-':
+            return num1 - num2;
+        case '*':
+            return num1 * num2;
+        case '/':
+            if (num2 === 0) {
+                return "Error: Division by zero!";
+            }
+            return num1 / num2;
+        case '%':
+            if (num2 === 0) {
+                return "Error: Modulus by zero!";
+            }
+            return num1 % num2;
+        default:
+            return "Invalid operator!";
+    }
+}
+
+   console.log(calculate(5 , 6 , "+"))
 
 
 

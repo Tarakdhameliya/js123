@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+
+        // var arr = [10,20,30,40,50,5]
+        // var count = 0;
+        
+        // for(var i=0; i<arr.length; i++){
+        //     if(arr[i] % 2 == 0){
+        //         count++;
+        //     }
+        // }
+        
+        // console.log("Number of even numbers in the array: " + count);
+
+        // var arr = [10,20,30,40,50,5]
+        // var sum = 0;
+        
+        // for(var i=0; i<arr.length; i++){
+        //     if(arr[i] % 2 == 0){
+        //         sum += arr[i];
+        //         count++;
+        //     }
+        // }
+
+        
+        // console.log("Sum of even numbers in the array: " + sum + " " + count);
+      
+
+        // for(var i=0; i<arr.length; i++){
+        //     sum += arr[i];
+        // }
+        // console.log("Sum of elements in the array: " + sum);
+
+        
+
+    
+    //    var arr = [10, -20, 30, -40, 50, 5]
+    //    var positive = [];
+    //    var negative = [];
+        
+    //    for(var i=0; i<arr.length; i++){
+    //        if(arr[i] > 0){
+    //            positive.push(arr[i]);
+    //        }
+    //        else if(arr[i] < 0){
+    //            negative.push(arr[i]);
+    //        }
+    //    }
+        
+    //    console.log("Positive numbers: " + positive);
+    //    console.log("Negative numbers: " + negative);
+
+   
+    var arr = [10, 20, 30, 40, 50, 5]
+    var min = arr[0];
+    var max = arr[0];
+    
+    for(var i=1; i<arr.length; i++){
+        if(arr[i] < min){
+            min = arr[i];
+        }
+        if(arr[i] > max){
+            max = arr[i];
+        }
+    }
+    
+    console.log("Minimum number in the array: " + min);
+    console.log("Maximum number in the array: " + max);
+
+
+    </script>
+</body>
+</html>
