@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        align-items: center;
+        display: flex;
+        color: rgb(226, 220, 220);
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-size: 20px;
+        background-color: rgba(21, 129, 148, 0.688);
+    }
+
+    #quote {
+        margin-bottom: 20px;
+        font-size: 1.2em;
+        text-align: center;
+        border-radius: 10px;
+        border: 2px solid black;
+        padding: 20px;
+      
+
+    }
+</style>
+
+<body>
+
+    <p id="quote"></p>
+
+    <script>
+        var quotes = [
+            "So many books, so little time",
+            " Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.   ",
+            "  A room without books is like a body without a soul. ",
+
+        ]
+
+        function getQuotes() {
+            var random = Math.floor(Math.random() * quotes.length)
+            return quotes[random]
+        }
+
+        function display() {
+            var dis = document.getElementById("quote")
+            dis.innerHTML = getQuotes()
+        }
+        window.onload = display;
+
+        setInterval(display, 1500)
+
+
+    </script>
+</body>
+
+</html>

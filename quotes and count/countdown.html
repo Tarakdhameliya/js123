@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #07dfd1, #6307ae);  
+        }
+
+        h1 {
+            font-size: 5rem;
+            transition: color 0.3s ease-in-out;
+        
+        }
+        
+        #countdown h1 {
+            /* font-size: 3vw; */
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <h1 id="countdown">10</h1>
+    <script>
+
+        let countdownvalue = 10;
+
+        const countdown = setInterval(() => {
+            document.getElementById("countdown").innerText = countdownvalue;
+            countdownvalue--;
+
+            if (countdownvalue < 0) {
+                clearInterval(countdown);
+                document.getElementById("countdown").innerText = "Time-Out"
+            }
+        }, 1000)
+
+    </script>
+
+</body>
+
+</html>
